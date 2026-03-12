@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sare Abdelfattah · CV</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cv-wrapper">
+
+    <!-- WELCOME MESSAGE (will be filled by JavaScript) -->
+    <div id="welcomeMessage"></div>
+
+    <!-- Header: name, title + profile image -->
+    <header class="cv-header">
+      <img src="images/profile.svg" alt="Sare Abdelfattah profile avatar" class="profile-img">
+      <div class="header-text">
+        <h1>Sare Abdelfattah Ali</h1>
+        <p class="title">Flutter & Computer Science Student</p>
+      </div>
+    </header>
+
+    <!-- Profile / short bio -->
+    <section class="cv-section" id="profile">
+      <h2><i class="fas fa-user-edit"></i> Profile</h2>
+      <p class="bio">Passionate frontend developer based in Cairo, with a keen eye for clean, accessible design. Currently in my final year of CS at Cairo University, I enjoy turning complex problems into simple, beautiful interfaces. Eager to contribute to impactful web projects.</p>
+    </section>
+
+    <!-- DARK MODE TOGGLE BUTTON -->
+    <div style="text-align: right; margin-bottom: 1rem;">
+      <button id="themeToggle">🌙 Dark Mode</button>
+    </div>
+
+    <!-- Two‑column layout for details -->
+    <div class="grid-2">
+
+      <!-- LEFT COLUMN: contact, education, skills -->
+      <div class="left-col">
+
+        <!-- Contact information -->
+        <section class="cv-section" id="contact">
+          <h2><i class="fas fa-address-card"></i> Contact</h2>
+          <ul class="contact-list">
+            <li><i class="fas fa-envelope"></i> <a href="mailto:sare.abdelfattah@example.edu">sare.abdelfattah@example.edu</a></li>
+            <li><i class="fab fa-linkedin"></i> <a href="#">linkedin.com/in/sare-abdelfattah</a></li>
+            <li><i class="fab fa-github"></i> <a href="#">github.com/sare-dev</a></li>
+            <li><i class="fas fa-phone-alt"></i> +20 115 678 1234</li>
+            <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+          </ul>
+        </section>
+
+        <!-- Education -->
+        <section class="cv-section" id="education">
+          <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+          <div class="edu-item">
+            <h3>BSc in Computer Science</h3>
+            <p class="meta">Faculty of Computers and Artificial Intelligence, Cairo University · 2022 – 2026 (expected)</p>
+            <p class="desc">Overall grade: Very Good. Relevant coursework: Web Development, Database Systems, Human‑Computer Interaction.</p>
+          </div>
+          <div class="edu-item">
+            <h3>Frontend Development Nanodegree</h3>
+            <p class="meta">Udacity · 2024</p>
+            <p class="desc">Built responsive web apps with React, Redux, and modern CSS.</p>
+          </div>
+        </section>
+
+        <!-- Skills (tag style) + DYNAMIC ADD SKILL -->
+        <section class="cv-section" id="skills">
+          <h2><i class="fas fa-code"></i> Skills</h2>
+          <ul class="skills-tags" id="skillsList">
+            <li>HTML5 & semantic markup</li>
+            <li>CSS3 / Flexbox / Grid</li>
+            <li>JavaScript (ES6+)</li>
+            <li>React.js</li>
+            <li>Tailwind / Bootstrap</li>
+            <li>Git & GitHub</li>
+            <li>Figma</li>
+            <li>Responsive design</li>
+          </ul>
+          <!-- Dynamic skill input -->
+          <div id="addSkill">
+            <input type="text" id="newSkill" placeholder="Enter a new skill">
+            <button id="addSkillBtn">Add Skill</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN: experience, projects, certifications -->
+      <div class="right-col">
+
+        <!-- Experience (internships / training) -->
+        <section class="cv-section" id="experience">
+          <h2><i class="fas fa-briefcase"></i> Experience</h2>
+          <div class="exp-item">
+            <h3>Frontend Developer Intern · <span class="org">Egypt Makes Electronics</span></h3>
+            <p class="meta">Jul 2025 – Sep 2025 · Cairo (remote)</p>
+            <ul>
+              <li>Collaborated with UI/UX team to implement a dashboard for monitoring IoT devices.</li>
+              <li>Refactored legacy CSS into reusable components, reducing code duplication by 30%.</li>
+              <li>Participated in daily stand‑ups and code reviews.</li>
+            </ul>
+          </div>
+          <div class="exp-item">
+            <h3>Freelance Web Developer</h3>
+            <p class="meta">Jan 2025 – present · Self‑employed</p>
+            <ul>
+              <li>Designed and built three static websites for local small businesses.</li>
+              <li>Ensured mobile‑first, SEO‑friendly code and provided training to clients.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="cv-section" id="projects">
+          <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+          <div class="project-item">
+            <h3>EgyTour – cultural guide</h3>
+            <p class="meta">HTML, CSS, JavaScript, Leaflet API</p>
+            <p>Interactive map highlighting historical sites in Cairo with custom markers and info cards. <a href="#">Live preview</a> (mock).</p>
+          </div>
+          <div class="project-item">
+            <h3>TaskFlow – to‑do app</h3>
+            <p class="meta">React, LocalStorage, Tailwind</p>
+            <p>Drag‑and‑drop task manager with dark mode and persistent storage. <a href="#">GitHub repo</a>.</p>
+          </div>
+        </section>
+
+        <!-- Certifications & Achievements + SHOW/HIDE BUTTON -->
+        <section class="cv-section" id="certifications">
+          <h2><i class="fas fa-certificate"></i> Certifications</h2>
+          <button id="toggleCertBtn">Hide Certifications</button>
+          <ul class="cert-list" id="certList">
+            <li><i class="fas fa-check-circle"></i> Responsive Web Design – freeCodeCamp (2024)</li>
+            <li><i class="fas fa-check-circle"></i> JavaScript Algorithms and Data Structures – freeCodeCamp (2025)</li>
+            <li><i class="fas fa-check-circle"></i> ICT Fundamentals – Ministry of Communications, Egypt (2023)</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM (new section) -->
+    <section class="cv-section" id="contact-form-section">
+      <h2><i class="fas fa-paper-plane"></i> Send a message</h2>
+      <form id="contactForm">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+      <div id="formFeedback"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cv-footer">
+      <p>© 2026 Sare Abdelfattah Ali – built for Design of Web‑Based Systems assignment</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

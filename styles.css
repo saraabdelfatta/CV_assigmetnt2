@@ -1,0 +1,104 @@
+/* ===== DARK MODE STYLES (added for Assignment 2) ===== */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .cv-wrapper {
+  background: #1e1e1e;
+  box-shadow: 0 20px 40px -12px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .cv-section h2 i {
+  color: #bb86fc;
+}
+
+body.dark-mode .bio {
+  background: #2a2a2a;
+  border-left-color: #bb86fc;
+  color: #ddd;
+}
+
+body.dark-mode .contact-list {
+  background: #2a2a2a;
+}
+
+body.dark-mode .contact-list li {
+  border-bottom-color: #444;
+}
+
+body.dark-mode .skills-tags li {
+  background: #333;
+  color: #ddd;
+  border-color: #555;
+}
+
+body.dark-mode .cert-list i {
+  color: #bb86fc;
+}
+
+body.dark-mode .cv-footer {
+  border-top-color: #333;
+  color: #aaa;
+}
+
+body.dark-mode #contactForm input,
+body.dark-mode #contactForm textarea {
+  background: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+/* Button styling */
+#themeToggle, #toggleCertBtn, #addSkillBtn, #contactForm button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 30px;
+  background: #b68b40;
+  color: white;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+#themeToggle:hover, #toggleCertBtn:hover, #addSkillBtn:hover, #contactForm button:hover {
+  background: #8e6930;
+}
+
+#addSkill {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+#newSkill {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+
+#contactForm div {
+  margin-bottom: 1rem;
+}
+
+#contactForm label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-family: inherit;
+}
+
+#formFeedback {
+  margin-top: 1rem;
+  font-weight: 500;
+}
